@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Light & Dark Mode */
+
+
+canvas {
+    border: 2px solid rebeccapurple;
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.toolbox {
+    background-color: rebeccapurple;
+    padding: 1rem;
+    width: 1000px;
+    display: flex;
+    gap: 10px;
+    border-radius: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: background-color 0.3s ease;
+}
+
+/* Buttons */
+.toolbox > * {
+    background-color: #fff;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Active Button State */
+.toolbox > *.active {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.toolbox > *:hover {
+    background-color: rebeccapurple;
+    color: white;
+    transform: scale(1.1);
+}
+
+.toolbox > *:active {
+    background-color: #8e44ad;
+    transform: scale(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .toolbox {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .toolbox > * {
+        width: 40px;
+        font-size: 1.2rem;
+    }
+
+    canvas {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Last Button Adjustments */
+.toolbox > *:last-child {
+    margin-left: auto;
+}
